@@ -4,12 +4,18 @@ override INCLUDES = \
 	-I.
 
 override CXXFLAGS += \
+	$(INCLUDES) \
 	-O3 \
 	-std=c++17 \
-	-fpermissive
+	-fpermissive 
 
-TARGETS = write_to_file
-OBJS = write_to_file.o
+override LDFLAGS += \
+	-lstdc++fs \
+	-lz \
+	-lm
+
+TARGETS = write_to_file create_dir
+OBJS = write_to_file.o create_dir.o
 
 .PHONY: all
 all: $(TARGETS)
@@ -17,9 +23,13 @@ all: $(TARGETS)
 write_to_file: write_to_file.o
 	$(CXX) -o $@ $^
 
+create_dir: create_dir.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
 .PHONY: clean
 clean:
 	@echo "Cleaning..."
 	@rm -f *.o
 	@rm -f *.csv
+	@rm -rf test_folder/
 	@rm -f $(TARGETS)
