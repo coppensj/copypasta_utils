@@ -2,7 +2,6 @@
 
 #include <experimental/filesystem>
 #include <string>
-#include <iostream>
 
 namespace fs = std::experimental::filesystem;
 
