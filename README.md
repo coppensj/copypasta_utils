@@ -1,2 +1,2 @@
 # copypasta_utils
-Code used all the time that I don't want to have to google or search around for in different projects all the time.
+Crap I use all the time so I put it here so I don't have to google it every time.
