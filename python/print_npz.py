@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
 
 def load_npz_data(ipath):
     return dict(np.load(ipath))
