@@ -1,0 +1,7 @@
+*.o
+*.d
+*.png
+*.swp
+*.swo
+*.gif
+python/__pycache__
